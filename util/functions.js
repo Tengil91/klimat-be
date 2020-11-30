@@ -14,6 +14,7 @@ module.exports.gogogo = function gogogo(req, res, next){
 }
 
 module.exports.validateName = function validateName(req, res, next){
+  console.log('in function: validateName');
   if(req.body.name && req.body.name.length > 0){
     next();
   } else {
@@ -67,6 +68,7 @@ module.exports.checkIfUserExists = async function checkIfUserExists(req, res, ne
 }
 
 module.exports.registerNewUser = function registerNewUser(req, res, next){
+  console.log('in function: registerNewUser');
   const user = new User({
     name: req.body.name,
     password: req.body.password,
