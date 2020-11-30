@@ -25,9 +25,9 @@ app.use((err, req, res, next) => {
 
 app.use(cors());
 
-/* app.get('/test', (req, res) => {
+app.post('/test', (req, res) => {
   res.send('hello?');
-}); */
+});
 
 addRoutes(app);
 
