@@ -26,7 +26,6 @@ app.use((err, req, res, next) => {
 app.use(cors());
 
 app.post('/test', (req, res) => {
-  console.log('post test successfull')
   res.send('hello?');
 });
 
