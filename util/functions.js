@@ -56,12 +56,12 @@ module.exports.returnUserData = function returnUserData(req, res, next){
 }
 
 module.exports.checkIfUserExists = async function checkIfUserExists(req, res, next){
+  
+  return res.json({user: User});
   await User.find({name: req.body.name}).then(result => {
-    console.log(result);
     if(result && result.length > 0){
       return res.json({error: 404});
     } else {
-      return res.json({error: 403});
       next();
     }
   });
